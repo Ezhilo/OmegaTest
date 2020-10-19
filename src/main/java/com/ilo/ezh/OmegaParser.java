@@ -25,7 +25,7 @@ public class OmegaParser {
             return;
         }
         //String fileName = "D:/Test/template.xml";
-        //String fileName = "D:/Test/template.xml";
+        //String fileName = "D:/Test/template2.xml";
         String fileName = args[0];
         List<Entry> entryList;
 
