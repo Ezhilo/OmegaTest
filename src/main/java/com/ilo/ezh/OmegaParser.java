@@ -24,12 +24,13 @@ public class OmegaParser {
             System.out.println("Error! No find filename in first argument!");
             return;
         }
+        String fileName = args[0];
         //String fileName = "D:/Test/template.xml";
         //String fileName = "D:/Test/template2.xml";
-        String fileName = args[0];
         List<Entry> entryList;
 
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();
+        xmlInputFactory.setProperty(XMLInputFactory.IS_COALESCING, Boolean.TRUE);
         try {
             XMLEventReader reader = xmlInputFactory.createXMLEventReader(new FileInputStream(fileName));
             int portionCount = 1;
@@ -63,7 +64,7 @@ public class OmegaParser {
         int counter = 0;
 
         while (reader.hasNext()) {
-            // получаем событие (элемент) и разбираем его по атрибутам
+
             XMLEvent xmlEvent = reader.nextEvent();
             if (xmlEvent.isStartElement()) {
                 StartElement startElement = xmlEvent.asStartElement();

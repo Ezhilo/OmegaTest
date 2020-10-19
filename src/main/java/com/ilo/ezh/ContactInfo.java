@@ -85,7 +85,7 @@ public class ContactInfo {
                 '}';
     }
 
-/*    @Override
+   /* @Override
     public String toString() {
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy.dd.MM HH:mm:ss");
